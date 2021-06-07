@@ -15,6 +15,9 @@ class stack:
         return self.arr[top]
 
 def are_pairs(par1, par2):
+    #the above methods takes in a pair of parenthesis then checks if their balanced using equality operator
+    # returns a boolean for every equality check
+    # True if balanced and False if not balanced
     if par1 =="{" and par2 == "}":
         return True
     else:
@@ -29,6 +32,7 @@ def are_pairs(par1, par2):
         return False
 def balancedParenthesis(parenthesis):
     st = stack()
+    #checks if parenthesis is empty
     if len(parenthesis) == 0:
         return True
     else:
