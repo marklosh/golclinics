@@ -7,26 +7,6 @@ order then prints "Blast off!"
 
 ```python
 ## How many times can a number be divide by 2 until we get to 1
-
-The `count_div_2(n)` functions counts the number of times the input number
-`n` can be divided by 2 before it reaches one or less.
-
-The time complexity may not be immediately obvious to all, but here's a hint:
-Count the number of iterations that this functions makes when then input is 4, 5, 6, 7, 8.
-At which values of `n` does the number of iterations increase compared to when `n = 4`?
-Now keep trying for values > 8, at which point does the number of iterations increase by 1 compared
-to when `n=8`? Do you see a pattern or trend between the growth in `n` and how that affects
-the increase in iterations? In general, how much should `n` grow before count increases by 1? Do you
-see a mathematical releationship `n` and the total number of iterations?
-
-```python
-def count_div_2(n):
-    count = 0
-    while n > 1:
-        n = n // 2
-        count += 1
-    return count
-```
 def countdown(n):
     while n > 0:
         print(n)
@@ -71,27 +51,7 @@ for a recursive function, the time complexity (worst_case) is O(n)
     T(n) = T(0) - 3n
     T(n) = 1 + 3n
     bigO = O(n)
-## How many times can a number be divide by 2 until we get to 1
 
-The `count_div_2(n)` functions counts the number of times the input number
-`n` can be divided by 2 before it reaches one or less.
-
-The time complexity may not be immediately obvious to all, but here's a hint:
-Count the number of iterations that this functions makes when then input is 4, 5, 6, 7, 8.
-At which values of `n` does the number of iterations increase compared to when `n = 4`?
-Now keep trying for values > 8, at which point does the number of iterations increase by 1 compared
-to when `n=8`? Do you see a pattern or trend between the growth in `n` and how that affects
-the increase in iterations? In general, how much should `n` grow before count increases by 1? Do you
-see a mathematical releationship `n` and the total number of iterations?
-
-```python
-def count_div_2(n):
-    count = 0
-    while n > 1:
-        n = n // 2
-        count += 1
-    return count
-```
 in terms of the space complexity it can be expressed as O(n) as an implicit stack will be formed depending on the input size
 
 ## Palindrome
@@ -170,6 +130,16 @@ def is_palindrome_recur(s):
 ### solution
 the above has a time complexity(worst_case) of O(n)
 also the space complexity is (O)n
+
+**Bonus questions**:
+
+- Between `is_palindrome`, `is_palindrome_rev` and `is_palindrome_recur` which do you think is more efficient, and why?
+- Which of the two implementations would you prefer for your own code, and why?
+
+## solution
+    is_palindrome_rev is more efficient because of its time and space complexities, though it utilizes python inbuilt method to reverse a string or an array
+
+    in terms of time and space complexities being the metrics then, i would go for is_palindrome_rev
 
 ## Concatenating arrays
 
@@ -297,5 +267,4 @@ def int_sqrt_bisect(x):
     return -1
 ```
 ### solution
-the above problem has a runtime complexity of O(1) and constant space complexity
-    
+the above problem has a runtime complexity of O(1) and constant space complexity - O(1)
