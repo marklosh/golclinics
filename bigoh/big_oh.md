@@ -267,4 +267,4 @@ def int_sqrt_bisect(x):
     return -1
 ```
 ### solution
-the above problem has a runtime complexity of O(1) and constant space complexity - O(1)
+the above problem has a runtime complexity of O(n) and constant space complexity of O(1)
